@@ -1,0 +1,207 @@
+Abstarct
+
+In the present real time world, due to the improvements and innovations of integrated System on Chip (SoC) applications there is a requirement to integrate of technology, Electronic Device design is an integration of analog, digital, mixed signal design. As, comparator is one of the basic circuitries used in arithmetic unit of various portable devices. Demand and popularity of any device depends on the non-functional parameter such as area, speed, battery life and reliability. The main issues in performance estimation are Area Consumption, Power dissipation, Propagation delay and Power –Delay Product. These performance criterions should be individually investigated, analyzed for the various designs of the comparator by different logic styles. 
+The comparator design can be realized by using various design topologies. Some of the vividly used techniques are Conventional CMOS logic, Pass Transistor Logic (PTL), Gate Diffusion Input (GDI) Logic, Stacking technique, Quantum-dot cellular automata etc. The selection of the design topology comparator is done based on the non-functional parameters of the design and its constraints. The performance functional parameters are improved by combining the topology architectures of different design techniques. In this work, the comparator is designed by using conventional CMOS logic, PTL, GDI, and hybridized topology by using 45nm technology. These circuits are designed by using Cadence Virtuoso EDA design tools. The simulation results and non-functional performance parameters are analyzed for different topology environments.
+Keywords: VLSI Design, Comparator, Datapath, EDA tools, CMOS Logic, GDI Logic, PTL Logic
+
+. INTRODUCTION
+In the world of technology, the demand for portable devices is increasing day by day. Demand and popularity of these devices depend on the small silicon area, higher speed, longer battery life, and reliability. So, basically, Electronic System is divided into a few components, which are listed below.
+	Microprocessor
+	Internet of things (IoT)
+	Microcontroller
+	Digital Signal Processing (DSP)
+	Field Programmable Gate Array (FPGA)
+	Application Specific Integrated Circuit (ASIC)
+
+Very-large-scale integration (VLSI) is the process of creating an integrated circuit (IC) by combining thousands of transistors into a single chip. VLSI began in the 1970s when complex semiconductor and communication technologies were being developed. The microprocessor is a VLSI device.
+Before the introduction of VLSI technology, most ICs had a limited set of functions they could perform. An electronic circuit might consist of a CPU, ROM, RAM and other glue logic. VLSI lets IC designers add all of these into one chip.
+The electronics industry has achieved a phenomenal growth over the last few decades, mainly due to the rapid advances in large scale integration technologies and system design applications. With the advent of very large-scale integration (VLSI) designs, the number of applications of integrated circuits (ICs) in high-performance computing, controls, telecommunications, image and video processing, and consumer electronics has been rising at a very fast pace.
+The current cutting-edge technologies such as high resolution and low bit-rate video and cellular communications provide the end-users with a marvelous number of applications, processing power, and portability. This trend is expected to grow rapidly, with very important implications for VLSI design and systems design.
+Electronic Device design is an integration of Analog, Digital, and mixed-signal design. All the above-mentioned components except ASIC come under digital design, whereas ASIC is the combination of Analog and mixed-signal designs. In ASIC, there are two types of designs semi-custom designs and full-custom designs. Semi-custom uses pre-designed logic cells and libraries known as standard cells. Full-custom design in VLSI is a method of creating integrated circuits that specifies the architecture of each individual transistor as well as their interconnections. 
+To design a System, we need inputs, outputs, a datapath, control unit. Simple datapath components include memory (stores the current instruction), PC or program counter (stores the address of current instruction), and ALU (executes current instruction). The interconnection of these simple components forms a basic datapath.
+There are various ways by which CMOS comparators can be designed. This paper deals with three different design techniques, i.e. Conventional, PTL, GDI, and Hybridized Logic model which serves as an efficient solution in achieving the required functional specification. Evaluation of performance parameters is done by employing the above-said design techniques. Each approach shows advancement in area utilization, speed of operation, power consumption, power dissipation, and transistor count. The parameters may improve with different design approaches. So, the appropriate selection of logic technique is very crucial in order to achieve desired results.
+
+Design and modeling of comparator
+
+A comparator is a very useful combinational logic circuit and a basic arithmetic component of a digital system. In many computers and other kinds of device processors, subtractors are used not only for the arithmetic calculations, but are also frequently used in other parts of the processor, where there is a requirement of calculating addresses, table indices, and similar operations. Digital or Binary Comparators are made up from standard AND, NOR and NOT gates that compare the digital signals present at their input terminals and depending upon the condition of these inputs it produce an output. In Very Large-Scale Integrated designs, Comparators are the common devices.
+                      
+LOGIC STYLES 
+There are three types of Logic styles: CMOS, GDI , PTL, Hybrid Logic style.
+
+Conventional CMOS based design.
+
+Conventional CMOS design technique makes use of many transistors. In this technique, transistors transmit logic high or logic ‘low’ from input to output. Due to more transistor count, area occupancy is relatively higher along with high power consumption and power dissipation. As a result of this, speed of the circuit reduces to a great extent. 
+
+
+Advantages:
+1. Extremely large fan-out capability (>50).
+2. Lowest power dissipation of all gates (a few nW).
+3. It provides very high noise immunity and noise margin (typically,  VDD/2) 
+4. Lower propagation delay than NMOS.
+5. Higher speed than NMOS. Currently, computer chips operating at (or more than) 4 GHz are available in the open market. 
+
+Disadvantages:
+1. Increased cost due to additional processing steps. But this is being rectified.
+2. Packing density less than NMOS. Using a Pass-Transistor logic structure, packing density comparable to or more than that of an NMOS gate is possible.
+3. MOS chips must be protected from acquiring static charges by keeping the leads shorted.
+
+GDI (Gate Diffusion Input)
+It can be defined as a new technique of low-power digital combinatorial circuit design called GDI. GDI technique allows for reducing power consumption, propagation delay, and area of digital circuits while maintaining low complexity of logic design.
+
+
+            Moreover, the most important difference between CMOS and GDI is that in GDI N, P and G terminals could be given a supply ‘VDD’ or can be grounded or can be supplied with input signal depending upon the circuit to be designed and hence effectively minimizing the number of transistors used in case of most logic circuits (eg. AND, OR, XOR, MUX, etc).
+         As the allotment of supply and ground to PMOS and NMOS is not fixed in case of GDI, therefore, problem of low voltage swing arises in case of GDI which is a drawback and hence finds difficulty in case of implementation of analog circuits.
+
+Advantages
+1.Reduce number of transistors count.
+2.Reduce supply voltage.
+3.Reduce the area, power, and delay.
+Disadvantages
+1.Limitations with cmos process.
+2.incresing the manufacturing cost.
+3)PTL LOGIC
+A popular and widely used alternative to complementary CMOS is pass transistor logic. In electronics, pass transistor logic (PTL) describes several logic families used in the design of integrated circuits. It reduces the count of transistors used to make different logic gates , by eliminating redundant transistors. 
+Pass transistor logic attempts to reduce the number of transistors required to implement logic by allowing the primary inputs to drive gate terminals as well as source/drain terminals.
+
+ 
+Fig 1. PTL using comparator A=B
+
+ 
+                        Fig 2. PTL using comparator A>B
+                             Fig 3. PTL using comparator A<B
+
+Advantages of Pass Transistor Logic 
+Ratio less 
+Lower area due to smaller dimension and less count of the transistors.
+Lesser power dissipation, no static power and short-circuit power dissipation.
+
+Disadvantages of Pass Transistor Logic
+Higher delay in long chain of pass transistors. 
+Proposed Hybrid Comparator
+ 
+Fig-Block diagram of Hybridization
+
+        PTL and GDI has some advantages over static CMOS that it has the capability to implement a logic function with smaller number of transistors, smaller delay, and less power dissipation. For full swing output level-restoring logics may be required at the PTL and GDI output gates and these level-restoring logics will slow down the PTL circuits and increase the power dissipation as well.  compares three basic logic circuits designed using CMOS, GDI and PTL using 45nm technology.
+Advantages
+1) Hybrid designing is a trending method in low-power designing.
+2) When it is implemented by using a synthesis of Pass Transistor Logic and CMOS logic styles, very low trends in power consumption, delay, power delay product and area in terms of transistor count.
+3) Even though the existing design is hybrid, an upswing in power consumption, delay and PDP is expected and curtailment of the design parameters can be prevailed using other hybrid designs
+
+4. Design of Comparators using EDA tools
+
+1.	Conventional CMOS comparator
+--schematic with a,b as inputs and a<b,a=b and a>b as outputs
+
+A<B
+ 
+
+A=B
+
+ 
+
+A>B
+
+ 
+--simulation waveform for above
+A<B
+ 
+
+A=B
+ 
+
+A>B
+ 
+
+--explanation 
+
+2.	GDI Logic
+--schematic with a,b as inputs and a<b,a=b and a>b as outputs
+A=B
+ 
+
+A<B
+ 
+
+
+A>B
+
+ 
+
+--simulation waveform for above
+A=B
+ 
+
+A<B
+ 
+
+A>B
+ 
+
+--explanation 
+3.	PTL Logic
+--schematic with a,b as inputs and a<b,a=b and a>b as outputs
+
+A<B
+
+ 
+
+A>B
+
+ 
+
+
+A=B
+ 
+
+--simulation wave form for above
+A>B
+ 
+
+A<B
+ 
+
+A=B
+ 
+--explanation 
+4.	Hybrid comparator
+--schematic with a,b as inputs and a<b,a=b and a>b as outputs
+ 
+--simulation wave form for above
+
+ 
+--explanation 
+
+
+
+
+Performance Analysis of Comparators
+
+
+--Delay comparison
+ 
+
+Table:-
+TOPOLOGY	DELAY FOR A<B(ns)	DELAY FOR A>B(ns)	DELAY FOR A=B(ns)
+CMOS	9.9	0.056	20
+PTL	20	0.351	0.017
+GDI	0.02	0.042	19.94
+HYBRID	20	20	0.0175
+
+--Area comparison
+
+Table:-
+AREA	NUMBER OF TRANSISTORS
+CMOS	16
+PTL	14
+GDI	8
+HYBRID	12
+
+Power comparison
+
+Table:
+
+TOPOLOGY	POWER FOR A<B(nW)	POWER FOR A>B(nW)	POWER FOR A=B(nW)
+CMOS	1.62	2.32	36.5
+PTL	4.25	30	10
+GDI	4.21	7.56	2.1
+HYBRID	1.048	0.004	1.04
